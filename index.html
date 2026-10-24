@@ -56,7 +56,7 @@
 
 <header>
   <h1>Privacy Policy</h1>
-  <p>Dual Shot &middot; last updated <time datetime="2026-10-23">October 23, 2026</time></p>
+  <p>Dual Shot &middot; last updated <time datetime="2026-10-24">October 24, 2026</time></p>
 </header>
 
 <section class="card">
@@ -65,14 +65,15 @@
   <ul>
     <li>Video and sound are recorded and processed <strong>entirely on your device</strong>. Nothing is ever uploaded.</li>
     <li>The camera and microphone are used <strong>only while the camera screen is open</strong>. Recording stops when you leave the app.</li>
-    <li>The app <strong>has no internet permission</strong>: it cannot send anything to the developer or to anyone else.</li>
-    <li>There is <strong>no account, no advertising, no analytics and no tracking</strong>.</li>
+    <li>The developer receives <strong>no data</strong> from the app. There is no account, no analytics and no tracking.</li>
+    <li>The app includes the Google AdMob SDK for one banner on the Library screen, but <strong>advertising is switched off until September 1, 2027</strong>: until then the SDK is never started, no ad is requested and the advertising ID is not read. See section 5.</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>2. Data we collect</h2>
-  <p><strong>None.</strong> The developer receives no data from the app &mdash; no videos, no sound, no usage statistics, no identifiers, no crash reports. The app has no internet access with which it could send any.</p>
+  <p><strong>None.</strong> The developer receives no data from the app &mdash; no videos, no sound, no usage statistics, no identifiers, no crash reports.</p>
+  <p>From September 1, 2027, the advertising SDK described in section 5 may collect some device data for Google to serve ads. That data goes to Google, not to the developer.</p>
 </section>
 
 <section class="card">
@@ -92,21 +93,25 @@
 
 <section class="card">
   <h2>4. Permissions used</h2>
-  <p>The app requests <strong>no contacts, location, phone or internet permissions</strong>.</p>
+  <p>The app requests <strong>no contacts, location or phone permissions</strong>.</p>
   <table>
     <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
     <tbody>
       <tr><td><code>CAMERA</code></td><td>Film your takes</td><td>When you first open the camera, after an explanation</td></tr>
       <tr><td><code>RECORD_AUDIO</code></td><td>Record sound with your takes. Video without sound works without it, and the microphone can be switched off in Settings</td><td>The first time you record with the microphone on</td></tr>
       <tr><td><code>WRITE_EXTERNAL_STORAGE</code></td><td>Android 8 and 9 only: save your videos to <code>Movies/Dual Shot</code>. Newer Android versions need no storage permission for this</td><td>On Android 8&ndash;9, before the first recording</td></tr>
-      <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Added by the video player library the app uses for review. It only reads whether a network exists; without the internet permission the app cannot connect to anything</td><td>Auto-granted (normal permission)</td></tr>
+      <tr><td><code>INTERNET</code> + <code>ACCESS_NETWORK_STATE</code></td><td>Advertising only (the Library banner), from September 1, 2027. Recording, review, trimming and sharing never use the network</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>AD_ID</code> (advertising ID)</td><td>Lets the AdMob SDK read the advertising ID once ads are on. Not read before September 1, 2027. You can reset or delete it in <em>Android Settings &rarr; Privacy &rarr; Ads</em></td><td>Auto-granted (normal permission)</td></tr>
     </tbody>
   </table>
 </section>
 
 <section class="card">
   <h2>5. Network activity and third parties</h2>
-  <p>The app works <strong>fully offline</strong> and makes no network connections. It contains <strong>no advertising, analytics, crash-reporting, social or attribution SDKs</strong>. Its libraries (Android&rsquo;s camera and media APIs, Jetpack Media3 for playback and trimming) run entirely on the device.</p>
+  <p>Recording, review, trimming and sharing work <strong>fully offline</strong>. Your videos and sound are never uploaded. The app contains <strong>no analytics, crash-reporting, social or attribution SDKs</strong>.</p>
+  <ul>
+    <li><strong>Google AdMob</strong> (advertising) is included for a single banner at the bottom of the <em>Library</em> screen &mdash; never on the camera or while you film. <strong>Until September 1, 2027 it is switched off</strong>: the SDK is never initialized, makes no network requests and reads no advertising ID. From that date the banner appears without an app update, and AdMob may collect the advertising ID, device information (model, Android version, language), approximate location derived from the IP address, and ad interactions, to serve and measure ads and prevent fraud, under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google&rsquo;s Privacy Policy</a> (<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from partner apps</a>). AdMob never receives your videos, sound or files.</li>
+  </ul>
   <p>When you tap <em>Share</em> or <em>Send to&hellip;</em> (for example to YouTube or Instagram), the app hands the file you picked to the app you chose through Android. From then on that app&rsquo;s own privacy policy applies. The developer never sees what you share.</p>
 </section>
 
@@ -118,7 +123,7 @@
 <section class="card">
   <h2>7. Data retention and deletion</h2>
   <p>Your videos stay in <code>Movies/Dual Shot</code> until you delete them &mdash; in the app (<em>Discard</em> on a take) or with any gallery or file manager. Uninstalling the app does <strong>not</strong> delete the videos already saved there, so you keep your work.</p>
-  <p>Take details and settings are removed when you clear the app&rsquo;s storage in <em>Android Settings &rarr; Apps &rarr; Dual Shot &rarr; Storage &rarr; Clear storage</em>, or uninstall the app. Since the developer holds no data about you, there is nothing for the developer to delete.</p>
+  <p>Take details and settings are removed when you clear the app&rsquo;s storage in <em>Android Settings &rarr; Apps &rarr; Dual Shot &rarr; Storage &rarr; Clear storage</em>, or uninstall the app. Since the developer holds no data about you, there is nothing for the developer to delete. Data collected by AdMob (from September 1, 2027) is handled by Google; you can reset or delete your advertising ID in Android settings.</p>
 </section>
 
 <section class="card">
@@ -128,7 +133,7 @@
 
 <section class="card">
   <h2>9. Changes to this policy</h2>
-  <p>If any material aspect of how the app handles data ever changes &mdash; for example if a future version adds a feature that needs the internet &mdash; this page will be updated first and the &ldquo;last updated&rdquo; date above will change. Continued use after a change constitutes acceptance.</p>
+  <p>If any material aspect of how the app handles data ever changes, this page will be updated first and the &ldquo;last updated&rdquo; date above will change. Continued use after a change constitutes acceptance.</p>
 </section>
 
 <section class="card">
